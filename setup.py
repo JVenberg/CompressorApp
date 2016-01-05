@@ -15,6 +15,8 @@
 
 import sys
 from setuptools import setup
+from distutils.core import setup
+import py2exe
 
 mainscript = 'Compressor.py'
 
@@ -33,16 +35,23 @@ if sys.platform == 'darwin':
 		)
 
 elif (sys.platform == 'win32'):
+	Mydata_files = [('', ['icon.ico'])]
 	extra_options = dict(
 		setup_requires=['py2exe'],
-		app=[mainscript],
+		data_files = Mydata_files,
+		windows = [
+			{
+				"script": "Compressor.py",
+				"icon_resources": [(1, "icon.ico")]
+			}
+		],
+		options = {
+			'build': {'build_base': 'win/build'},
+			'py2exe': {
+				'dist_dir': "win/dist"
+			}
+		}
 	)
-
-else:
-	extra_options = dict(
-	 	windows=[{'script':[mainscript], "icon_resources": [(1,"icon.ico")]}],
-	)
-
 setup(
     name="Compressor",
     **extra_options

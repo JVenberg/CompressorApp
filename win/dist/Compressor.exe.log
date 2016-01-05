@@ -1,0 +1,6 @@
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyc", line 1536, in __call__
+  File "Tkinter.pyc", line 587, in callit
+  File "Compressor.py", line 119, in load_wemo
+NameError: global name 'ip' is not defined
