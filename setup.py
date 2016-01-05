@@ -16,7 +16,10 @@
 import sys
 from setuptools import setup
 from distutils.core import setup
-import py2exe
+try:
+	import py2exe
+except ImportError:
+	pass
 
 mainscript = 'Compressor.py'
 

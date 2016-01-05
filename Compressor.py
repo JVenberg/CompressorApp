@@ -293,6 +293,11 @@ for x in range(root.grid_size()[1] - 1):
 
 root.grid_rowconfigure(5, weight=1)
 
+try:
+    root.iconbitmap(default='icon.ico')
+except:
+    pass
+
 root.bind("<Key>", press_down)
 root.bind("<BackSpace>", backspace_press)
 root.bind("<Return>", return_press)
@@ -300,7 +305,6 @@ root.title("Compressor Control")
 root.geometry("250x300")
 root.minsize("250","300")
 root.configure(background='#757575')
-root.iconbitmap(default='icon.ico')
 root.after(1000, change_colon)
 root.after(500, main_timer)
 root.after(200, load_wemo)

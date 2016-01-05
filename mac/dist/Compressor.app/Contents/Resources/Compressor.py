@@ -293,6 +293,11 @@ for x in range(root.grid_size()[1] - 1):
 
 root.grid_rowconfigure(5, weight=1)
 
+try:
+    root.iconbitmap(default='icon.ico')
+except:
+    pass
+
 root.bind("<Key>", press_down)
 root.bind("<BackSpace>", backspace_press)
 root.bind("<Return>", return_press)
