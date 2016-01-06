@@ -45,7 +45,8 @@ elif (sys.platform == 'win32'):
 		windows = [
 			{
 				"script": "main.py",
-				"icon_resources": [(1, "icon.ico")]
+				"icon_resources": [(1, "icon.ico")],
+				"dest_base" : "Compressor Control"
 			}
 		],
 		options = {
