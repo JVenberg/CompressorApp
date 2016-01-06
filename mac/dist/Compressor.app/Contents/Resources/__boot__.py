@@ -346,6 +346,6 @@ def _setup_ctypes():
 _setup_ctypes()
 
 
-DEFAULT_SCRIPT='Compressor.py'
+DEFAULT_SCRIPT='main.py'
 SCRIPT_MAP={}
 _run()

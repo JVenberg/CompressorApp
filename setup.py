@@ -21,7 +21,7 @@ try:
 except ImportError:
 	pass
 
-mainscript = 'Compressor.py'
+mainscript = 'main.py'
 
 if sys.platform == 'darwin':
 	extra_options = dict(
@@ -44,7 +44,7 @@ elif (sys.platform == 'win32'):
 		data_files = Mydata_files,
 		windows = [
 			{
-				"script": "Compressor.py",
+				"script": "main.py",
 				"icon_resources": [(1, "icon.ico")]
 			}
 		],
